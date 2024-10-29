@@ -8,7 +8,12 @@ return {
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
+        fold = { enable = true }
       })
+      vim.opt.foldmethod = "expr"
+      vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+      vim.opt.foldlevel = 99  -- Despliega todo por defecto
+      vim.opt.foldcolumn = "1"
     end
   }
 }
